@@ -112,12 +112,21 @@ class ViewController: UIViewController {
     currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed);
     updateUI();
   }
+  
+  func updateCorrectWord() {
+    var displayWord = [String]();
+    for letter in currentGame.guessedWord {
+      displayWord.append(String(letter));
+    }
+    correctWordLabel.text = displayWord.joined(separator: " ");
+  }
 
   func updateUI() {
     let movesRemaining = currentGame.incorrectMovesRemaining;
-    let imageName = "Tree0\(movesRemaining < 8 ? movesRemaining : 7)"; //we are using 7 here bcs Tree07 is max. available image.
+    let imageName = "Tree0\(movesRemaining < 0 ? 0 : movesRemaining < 8 ? movesRemaining : 7)"; //we are using 7 here bcs Tree07 is max. available image.
     treeImageView.image = UIImage.init(named: imageName);
     scoreLabel.text = "Выигрыши: \(totalWins), Проигрыши: \(totalLosses)";
+    updateCorrectWord();
   }
   
   override func viewDidLoad() {
@@ -129,9 +138,10 @@ class ViewController: UIViewController {
   // MARK: - IB Actions
   
   @IBAction func letterButtonPressed(_ sender: UIButton) {
-    
     sender.isEnabled = false;
-    
+    let letter = sender.title(for: .normal)!;
+    currentGame.playerGuessed(letter: Character(letter));
+    updateUI();
   }
   
 }
