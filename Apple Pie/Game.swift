@@ -18,7 +18,7 @@ struct Game {
   var guessedWord: String {
     var result = String();
     for letter in word {
-      if guessedLatters .contains(Character(letter.lowercased())) {
+      if guessedLatters .contains(Character(letter.lowercased())) || letter == "-" || letter == " " {
         result += String(letter);
       }
       else {
