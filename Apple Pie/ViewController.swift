@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var treeImageView: UIImageView!
+  
+  @IBOutlet var letterButtons: [UIButton]!
+  
+  @IBOutlet weak var scoreLabel: UILabel!
+  @IBOutlet weak var correctWordLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+  
   }
 
-
+  // MARK: - IB Actions
+  
+  @IBAction func letterButtonPressed(_ sender: UIButton) {
+    
+    sender.isEnabled = false;
+    
+  }
+  
 }
 
