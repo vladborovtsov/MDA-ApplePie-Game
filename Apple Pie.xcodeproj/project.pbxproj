@@ -26,6 +26,10 @@
 		A4D7E35B25B6B7D70053AD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D7E35D25B6B7D70053AD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D7E38E25B6D5080053AD54 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A4D7E39425B8063A0053AD54 /* Screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot1.png; sourceTree = "<group>"; };
+		A4D7E39525B8063A0053AD54 /* Screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot3.png; sourceTree = "<group>"; };
+		A4D7E39625B8063A0053AD54 /* Screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot2.png; sourceTree = "<group>"; };
+		A4D7E39725B8063A0053AD54 /* Screenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		A4D7E34325B6B7D40053AD54 = {
 			isa = PBXGroup;
 			children = (
+				A4D7E39325B806210053AD54 /* Screenshots */,
 				A4D7E34E25B6B7D40053AD54 /* Apple Pie */,
 				A4D7E34D25B6B7D40053AD54 /* Products */,
 			);
@@ -68,6 +73,17 @@
 				A4D7E35325B6B7D40053AD54 /* ViewController.swift */,
 			);
 			path = "Apple Pie";
+			sourceTree = "<group>";
+		};
+		A4D7E39325B806210053AD54 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				A4D7E39425B8063A0053AD54 /* Screenshot1.png */,
+				A4D7E39625B8063A0053AD54 /* Screenshot2.png */,
+				A4D7E39525B8063A0053AD54 /* Screenshot3.png */,
+				A4D7E39725B8063A0053AD54 /* Screenshot4.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
